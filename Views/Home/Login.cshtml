@@ -1,0 +1,70 @@
+﻿@model NWMSWebApplication.Models.Login
+@{
+    ViewData["Title"] = "Login";
+}
+
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#mybutton').click(function () {
+                var username = document.getElementById('username');
+                var password = document.getElementById('password');
+                alert(username);
+                alert(password);
+                if (username == "Ravi" && password == "ravi563") {
+                    window.location.href = "/Home/User";
+                }
+                else if (username == "Swaroop" && password == "swaroop563") {
+                    window.location.href = "/Home/User";
+                }
+                else if (username == "Shiva" && password == "shiva563") {
+                    window.location.href = "/Home/User";
+                }
+                else {
+                    $('#mymodal').modal("show");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+   
+        <div class="top-buffer" style="padding-top:50px;"></div>
+        <div class="panel panel-primary">
+           
+            <div class="panel-body">
+                <label class="text-secondary col-md-5" >User Name</label>
+                <input class="form-control col-md-5" id="username" />
+                <label class="text-secondary col-md-5">Password</label>
+                <input class="form-control col-md-5" id="password"/>
+                <br /><br />
+                <div class="btn-group">
+                    <input type="submit" class="btn btn-primary" id="mybutton"/>
+                </div>
+            </div>
+        </div>
+
+    <div class="modal" role="dialog" id="mymodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Enter Valid credentials</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal"></button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    
+</body>
+</html>
+

@@ -1,0 +1,13 @@
+﻿body {
+    
+   
+}
+
+#mypanel {
+    background-image: url('../nwmsu.jpg');
+    margin: 0;
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    padding-left: 23px;
+}
